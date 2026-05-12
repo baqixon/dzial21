@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="zad21_3.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <Label Text="Formularz rejestracji"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Grid ColumnDefinitions="Auto,*"
+                  RowDefinitions="Auto,Auto,Auto,Auto,Auto"
+                  ColumnSpacing="10"
+                  RowSpacing="15">
+
+                <Label Text="Imię:"
+                       Grid.Row="0"
+                       Grid.Column="0"
+                       VerticalOptions="Center" />
+
+                <Entry x:Name="nameEntry"
+                       Grid.Row="0"
+                       Grid.Column="1"
+                       MaxLength="50"
+                       Keyboard="Default"
+                       Placeholder="Podaj imię" />
+
+                <Label Text="Email:"
+                       Grid.Row="1"
+                       Grid.Column="0"
+                       VerticalOptions="Center" />
+
+                <Entry x:Name="emailEntry"
+                       Grid.Row="1"
+                       Grid.Column="1"
+                       Keyboard="Email"
+                       Placeholder="Podaj email" />
+
+                <Label Text="Hasło:"
+                       Grid.Row="2"
+                       Grid.Column="0"
+                       VerticalOptions="Center" />
+
+                <Entry x:Name="passwordEntry"
+                       Grid.Row="2"
+                       Grid.Column="1"
+                       IsPassword="True"
+                       MaxLength="50"
+                       Placeholder="Podaj hasło" />
+
+                <Label Text="Data urodzenia:"
+                       Grid.Row="3"
+                       Grid.Column="0"
+                       VerticalOptions="Center" />
+
+                <DatePicker x:Name="birthDatePicker"
+                            Grid.Row="3"
+                            Grid.Column="1" />
+
+                <Label Text="Płeć:"
+                       Grid.Row="4"
+                       Grid.Column="0"
+                       VerticalOptions="Center" />
+
+                <Picker x:Name="genderPicker"
+                        Grid.Row="4"
+                        Grid.Column="1"
+                        Title="Wybierz płeć">
+
+                    <Picker.Items>
+                        <x:String>Kobieta</x:String>
+                        <x:String>Mężczyzna</x:String>
+                        <x:String>Inna</x:String>
+                    </Picker.Items>
+
+                </Picker>
+
+            </Grid>
+
+            <HorizontalStackLayout Spacing="10">
+
+                <CheckBox x:Name="termsCheckBox"
+                          CheckedChanged="OnCheckedChanged" />
+
+                <Label Text="Akceptuję warunki użytkowania"
+                       VerticalOptions="Center" />
+
+            </HorizontalStackLayout>
+
+            <Button x:Name="registerButton"
+                    Text="Zarejestruj"
+                    IsEnabled="False"
+                    Clicked="OnRegisterClicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

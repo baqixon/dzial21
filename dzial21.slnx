@@ -1,0 +1,9 @@
+<Solution>
+  <Project Path="zad21_2/zad21_2.csproj">
+    <Deploy Solution="Debug|*" />
+  </Project>
+  <Project Path="zad21_3/zad21_3.csproj">
+    <Deploy Solution="Debug|*" />
+  </Project>
+  <Project Path="zad21_4/zad21_4.csproj" />
+</Solution>

@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="zad21_4.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <Label Text="Skontaktuj się z nami"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Label Text="Imię" />
+
+            <Entry x:Name="nameEntry"
+                   Placeholder="Podaj imię"
+                   MaxLength="100" />
+
+            <Label Text="Email" />
+
+            <Entry x:Name="emailEntry"
+                   Placeholder="Podaj email"
+                   Keyboard="Email" />
+
+            <Label Text="Temat" />
+
+            <Picker x:Name="topicPicker"
+                    Title="Wybierz temat"
+                    SelectedIndexChanged="OnTopicChanged">
+                
+                
+                
+                <Picker.Items>
+                    <x:String>Reklamacja</x:String>
+                    <x:String>Podziękowanie</x:String>
+                    <x:String>Pytanie</x:String>
+                    <x:String>Inne</x:String>
+                </Picker.Items>
+
+            </Picker>
+
+            <Label Text="Wiadomości" />
+
+            <Editor x:Name="messageEditor"
+                    Placeholder="Napisz wiadomość"
+                    AutoSize="TextChanges"
+                    MaxLength="1000"
+                    HeightRequest="150" 
+                    />
+
+            <Label Text="Priorytet" />
+
+            <Picker x:Name="priorityPicker"
+                    Title="Wybierz priorytet"
+                    IsEnabled="False" />
+
+            <HorizontalStackLayout Spacing="10">
+
+                <CheckBox x:Name="copyCheckBox"
+                          />
+
+                <Label Text="Wyślij kopię wiadomości na email-a"
+                       VerticalOptions="Center" 
+                       />
+
+            </HorizontalStackLayout>
+
+            <Button Text="Wyślij"
+                    Clicked="OnSendClicked"
+                    />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

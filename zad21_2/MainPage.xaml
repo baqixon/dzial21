@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="zad21_2.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+        Padding="30"
+        Spacing="20"
+        VerticalOptions="Center">
+
+            <Label Text="Zaloguj się"
+               FontSize="28"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+
+            <Entry x:Name="emailEntry"
+               Placeholder="Podaj swójemail"
+               Keyboard="Email"
+               TextChanged="OnTextChanged" />
+
+            <Entry x:Name="passwordEntry"
+               Placeholder="Podaj hasło"
+               IsPassword="True"
+               TextChanged="OnTextChanged" />
+
+            <Button x:Name="loginButton"
+                Text="Zaloguj się"
+                IsEnabled="False"
+                Clicked="OnLoginClicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
